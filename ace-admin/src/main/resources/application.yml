@@ -11,7 +11,8 @@ spring:
         default-property-inclusion: non_null
     datasource:
         name: test
-        url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/ag_admin?useUnicode=true&characterEncoding=UTF8
+        #url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/ag_admin?useUnicode=true&characterEncoding=UTF8
+        url: jdbc:mysql://10.10.0.9:3306/ag_admin?useUnicode=true&characterEncoding=UTF8
         username: root
         password: 123456
         # 使用druid数据源
@@ -31,10 +32,14 @@ spring:
         poolPreparedStatements: true
         maxOpenPreparedStatements: 20
     rabbitmq:
-        host: ${RABBIT_MQ_HOST:localhost}
-        port:  ${RABBIT_MQ_PORT:5672}
-        username: guest
-        password: guest
+#        host: ${RABBIT_MQ_HOST:localhost}
+#        port:  ${RABBIT_MQ_PORT:5672}
+#        username: guest
+#        password: guest
+        host: 172.16.0.54
+        port:  5672
+        username: admin
+        password: 123456
     zipkin:
         enabled: true
     sleuth:

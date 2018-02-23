@@ -5,7 +5,9 @@ spring:
         config:
             server:
                 git:
-                    uri: https://git.oschina.net/geek_qi/AG-Config.git
+                    uri: https://github.com/mijingling/Spring-Cloud-AG-Admin.git
+                    searchPaths: ace-config-repo
+                    lable: master
 
 server:
     port: 8750 #启动端口
